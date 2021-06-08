@@ -5,6 +5,20 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
+HELP_TEXT = """
+<b>~ Send Any English Text
+~ Choose A Font
+~ Then Copy Paste It</b>
+
+<b><u>JOIN @eKbOtZ_upDaTE For More.</u></b>
+"""
+HELP_BUTTON = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Channel 🔰', url='https://telegram.me/eKbOtZ_upDaTE')
+        ]]
+    )
+
+
 @Client.on_message(filters.command('start'))
 async def start(c, m):
     owner = await c.get_users(int(Config.OWNER_ID))
