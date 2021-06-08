@@ -13,18 +13,19 @@ async def start(c, m):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')},
 
-     **I Am Font Generator Bot
+     **I Am Font Generator Bot By @eKbOt_upDaTE.
 
-`I can help you to get stylish fonts. Just send me some text and see magic.`
+**I can help you to get stylish fonts. Just send me some text and select any font button.**
 
-**👲 Maintained By:** {owner.mention(style='md')}
 """
 
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}")
-        ]
+            InlineKeyboardButton('Help 🔰', callback_data="help")
+        ][
+            InlineKeyboardButton('Channel ⭕', url="https://t.me/ekbotz_update")
+        ] 
     ]
     await m.reply_text(
         text=text,
@@ -108,6 +109,8 @@ async def nxt(c, m):
     else:
         await style_buttons(c, m, cb=True)
 
+@Client.on_callback_query()
+async def cb_handler(c, m) 
 
 @Client.on_callback_query(filters.regex('^style'))
 async def style(c, m):
