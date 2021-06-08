@@ -110,7 +110,13 @@ async def nxt(c, m):
         await style_buttons(c, m, cb=True)
 
 @Client.on_callback_query()
-async def cb_handler(c, m) 
+async def cb_handler(c, m)
+    if update == "help":
+    await update.message.edit_text(
+            text=HELP_TEXT,
+            reply_markup=HELP_BUTTONS,
+            disable_web_page_preview=True
+        )
 
 @Client.on_callback_query(filters.regex('^style'))
 async def style(c, m):
