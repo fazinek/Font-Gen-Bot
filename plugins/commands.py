@@ -13,7 +13,7 @@ async def start(c, m):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')},
 
-💡 ** I am Stylish Font Bot**
+     **I Am Font Generator Bot
 
 `I can help you to get stylish fonts. Just send me some text and see magic.`
 
