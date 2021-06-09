@@ -18,14 +18,11 @@ async def start(c, m):
 **I can help you to get stylish fonts. Just send me some text and select any font button.**
 """
 
-
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('Channel 🔰', url="https://t.me/ekbotz_update")
-        ][
-            InlineKeyboardButton('Other Bots 🤖', url="https://t.me/ekbotz_update/137")
-        ] 
+            InlineKeyboardButton('Channel 🔰', url=f"https://t.me/eKbOtZ_upDaTE")
+        ]
     ]
     await m.reply_text(
         text=text,
