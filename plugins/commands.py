@@ -46,6 +46,14 @@ async def start(c, m):
         reply_markup=InlineKeyboardMarkup(buttons)
     )
 
+@Client.on_callback_query('help')
+async def help(c, m)
+    if update == "help":
+    await update.message.edit_text(
+            text=HELP_TEXT,
+            reply_markup=HELP_BUTTONS,
+            disable_web_page_preview=True
+        )
 
 
 @Client.on_message(filters.private & filters.incoming & filters.text)
