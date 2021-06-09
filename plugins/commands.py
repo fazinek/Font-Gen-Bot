@@ -21,8 +21,7 @@ async def start(c, m):
 
     # Buttons
     buttons = [
-        [
-            InlineKeyboardButton('Channel 🔰', url="https://t.me/ekbotz_update")
+        [InlineKeyboardButton('Channel 🔰', url="https://t.me/ekbotz_update")
         ][
             InlineKeyboardButton('Other Bots 🤖', url="https://t.me/ekbotz_update/137")
         ] 
