@@ -13,9 +13,10 @@ async def start(c, m):
     # start text
     text = f"""Hey! {m.from_user.mention(style='md')},
 
-     **I Am Font Generator Bot By @eKbOt_upDaTE.
+ **I Am Font Generator Bot By @eKbOt_upDaTE.**
 
-**I can help you to get stylish fonts. Just send me some text and select any font button.**
+**I can help you to get stylish fonts. Just send me some English texts and select any font button.**
+**JOIN @eKbOtZ_upDaTE FOR MORE....**
 """
 
     # Buttons
