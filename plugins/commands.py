@@ -16,7 +16,6 @@ async def start(c, m):
      **I Am Font Generator Bot By @eKbOt_upDaTE.
 
 **I can help you to get stylish fonts. Just send me some text and select any font button.**
-
 """
 
 
