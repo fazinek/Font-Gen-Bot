@@ -5,20 +5,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-HELP_TEXT = """
-<b>~ Send Any English Text
-~ Choose A Font
-~ Then Copy Paste It</b>
-
-<b><u>JOIN @eKbOtZ_upDaTE For More.</u></b>
-"""
-HELP_BUTTON = InlineKeyboardMarkup(
-        [[
-        InlineKeyboardButton('Channel 🔰', url='https://telegram.me/eKbOtZ_upDaTE')
-        ]]
-    )
-
-
 @Client.on_message(filters.command('start'))
 async def start(c, m):
     owner = await c.get_users(int(Config.OWNER_ID))
@@ -36,9 +22,9 @@ async def start(c, m):
     # Buttons
     buttons = [
         [
-            InlineKeyboardButton('Help 🔰', callback_data="help")
+            InlineKeyboardButton('Channel 🔰, url="https://t.me/ekbotz_update")
         ][
-            InlineKeyboardButton('Channel ⭕', url="https://t.me/ekbotz_update")
+            InlineKeyboardButton('Other Bots 🤖', url="https://t.me/ekbotz_update/137")
         ] 
     ]
     await m.reply_text(
@@ -123,12 +109,6 @@ async def nxt(c, m):
     else:
         await style_buttons(c, m, cb=True)
 
-elif update.data == "help":
-        await update.message.edit_text(
-            text=HELP_TEXT,
-            reply_markup=HELP_BUTTONS,
-            disable_web_page_preview=True
-        )
 
 @Client.on_callback_query(filters.regex('^style'))
 async def style(c, m):
